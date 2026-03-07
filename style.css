@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Exo:ital,wght@0,100..900;1,100..900&family=Fredericka+the+Great&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --base-colour: #63815b;
+    --text-colour: #242424;
+    --heading-colour: #000000;
+    --hover-colour: #3d0202;
+    --colour-1: #ece9d9;
+    --color-2:#f3f1e7;
+    --button-color: #d1843c;
+    --button-color-hover: #e79141;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Merriweather;
+    color: var(--text-colour);
+}
+
+body {
+    padding: 2em;
+    background-color: var(--base-colour);
+    background-image: url('images/background-yosemite.jpg');
+    
+}
+
+h1, h2, h3 {
+    font-family: Fredericka the Great, Merriweather;
+    color: var(--heading-colour);
+    font-weight: normal;
+    font-size: 2.5rem;
+}
+
+nav {
+    margin: 1em auto 1em auto;
+    width: min(1300px, 100%);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 0.5em;
+}
+
+nav li:first-child {
+    margin-right: auto;
+    font-family: Fredericka the Great, Merriweather, Poppins;
+    font-weight: normal;
+    color: var(--heading-colour);
+    padding: 0.5em 0.5em;
+    background-color: var(--colour-1);
+    border-radius: 0.5em;
+    font-size: 2rem;
+}
+
+.home-button {
+    text-decoration: none;
+    color: var(--heading-colour);
+}
+
+.header-button {
+    display: inline-block;
+    color: var(--text-colour);
+    background-color: var(--colour-1);
+    border-radius: 0.5em;
+    padding: .75em 1.25em;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Courier Prime';
+}
+
+.header-button:hover {
+    display: inline-block;
+    color: var(--hover-colour);
+    background-color: #ce00000c;
+    border-radius: 0.5em;
+    padding: .75em 1.25em;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+header {
+    margin: 1em auto;
+    width: min(75em, 100%);
+    background-color: var(--colour-1);
+    padding: 0 1em 0 1em;
+    border-radius: 2em;
+}
+
+section {
+    margin: 1em auto;
+    width: min(75em, 100%);
+    background-color: var(--colour-1);
+    padding: min(2em,15%);
+    border-radius: 2em;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
+.flex-container-reverse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 3em;
+}
+
+section img {
+    max-width: 100%;
+    border-radius: 1em;
+    object-fit: cover;
+    object-position: center;
+}
+
+.text-container {
+    flex: 0 1 34em;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.text-container p {
+    margin: .75em 0 0em 0;
+    font-size: 1.25rem;
+}
+
+.text-container a {
+    margin: .75em 0 0em 0;
+    font-size: 1.25rem;
+    justify-content: center;
+    align-content: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.cta-button {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #575656;
+    font-family: Exo;
+    border-style: solid;
+    border-radius: 0.1em;
+    padding: .2em 1em;
+    justify-self: center;
+    margin: 0.7em;
+    display: inline-block;
+}
+
+.cta-button:hover {
+        scale: 102%;
+    background-color: #2c00001f;
+    color: var(--hover-colour);
+}
+
+.gig {
+    font-family: Courier Prime;
+    margin: 3em;
+}
+
+.gig a {
+    display: inline-block;
+    margin: .2em;
+    font-size: 1.5rem;
+}
+
+/* style the date of the gig */
+.gig a:first-child {
+    text-decoration: underline;
+}
+
+.gig .ticket-link {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #575656;
+    font-family: Exo;
+    border-style: solid;
+    border-width: .15em;
+    border-radius: 0.1em;
+    padding: .2em 1.5em;
+    justify-self: center;
+    margin: 0.7em;
+}
+
+.ticket-link:hover {
+    scale: 102%;
+    background-color: #2c00001f;
+    color: var(--hover-colour);
+}
+
+.past-gig {
+    margin: 1em 0 0 0;
+    font-family: Courier Prime;
+    text-align: left;
+    justify-content: left;
+}
+
+.past-gig a {
+    margin: 0;
+    display: block;
+    padding: 0;
+}
+
+.past-gig .ticket-link {
+    display: none;
+}
+
+.social-icon {
+    margin: 1.3em .4em;
+}
+
+.social-icon:hover {
+    scale: 1.1;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  display: none;
+}
+
+@media(max-width:884px) {
+    .header-button, .spacer {
+        display: none;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-icon {
+        margin: 0 20px 0 0;
+    }
+    
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0px;
+    background-color: #f1f1f1;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: #ddd;}
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+}

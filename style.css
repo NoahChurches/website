@@ -26,7 +26,7 @@ body {
     padding: 2em;
     background-color: var(--base-colour);
     background-image: url('images/background-yosemite.jpg');
-    
+    background-size: 100% auto;
 }
 
 h1, h2, h3 {
@@ -269,4 +269,5 @@ h1 {
 
     /* Show the dropdown menu on hover */
     .dropdown:hover .dropdown-content {display: block;}
+
 }

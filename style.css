@@ -23,10 +23,11 @@ html {
 }
 
 body {
-    padding: 2em;
+    padding: 1em min(2em, 3%);
     background-color: var(--base-colour);
     background-image: url('images/background-yosemite.jpg');
     background-size: 100% auto;
+    
 }
 
 h1, h2, h3 {
@@ -87,7 +88,7 @@ nav li:first-child {
 }
 
 header {
-    margin: 1em auto;
+    margin: 0em auto;
     width: min(75em, 100%);
     background-color: var(--colour-1);
     padding: 0 1em 0 1em;
@@ -98,7 +99,7 @@ section {
     margin: 1em auto;
     width: min(75em, 100%);
     background-color: var(--colour-1);
-    padding: min(2em,15%);
+    padding: 1.5em min(2em, 3%) min(2em, 3%);
     border-radius: 2em;
 }
 
@@ -129,6 +130,7 @@ section img {
     flex: 0 1 34em;
     text-align: center;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size-adjust: .4;
 }
 
 .text-container p {
@@ -269,5 +271,4 @@ h1 {
 
     /* Show the dropdown menu on hover */
     .dropdown:hover .dropdown-content {display: block;}
-
 }

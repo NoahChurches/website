@@ -1,14 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Exo:ital,wght@0,100..900;1,100..900&family=Fredericka+the+Great&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Exo:ital,wght@0,100..900;1,100..900&family=Finlandica:ital,wght@0,400..700;1,400..700&family=Fredericka+the+Great&family=Limelight&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rye&family=Sancreek&family=Young+Serif&display=swap');
+
 
 :root {
     --base-colour: #63815b;
     --text-colour: #242424;
-    --heading-colour: #000000;
-    --hover-colour: #3d0202;
-    --colour-1: #ece9d9;
+    --heading-colour: #2f2d4d;
+    --colour-1: #ece9d9dc;
     --color-2:#f3f1e7;
-    --button-color: #d1843c;
-    --button-color-hover: #e79141;
+    --button-color: #303e5a;
+    --button-color-hover: #303e5a;
+    --button-background-colour-hover: #ce795211;
+    --roundness: .3em;
 }
 
 * {
@@ -31,10 +33,10 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: Fredericka the Great, Merriweather;
+    font-family: Young Serif, Limelight, Merriweather;
     color: var(--heading-colour);
     font-weight: normal;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
 }
 
 nav {
@@ -51,11 +53,10 @@ nav ul {
 
 nav li:first-child {
     margin-right: auto;
-    font-family: Fredericka the Great, Merriweather, Poppins;
+    font-family: Young Serif, Limelight, Fredericka the Great, Merriweather, Poppins;
     font-weight: normal;
     color: var(--heading-colour);
     padding: 0.5em 0.5em;
-    background-color: var(--colour-1);
     border-radius: 0.5em;
     font-size: 2rem;
 }
@@ -67,8 +68,7 @@ nav li:first-child {
 
 .header-button {
     display: inline-block;
-    color: var(--text-colour);
-    background-color: var(--colour-1);
+    color: var(--button-color);
     border-radius: 0.5em;
     padding: .75em 1.25em;
     font-weight: normal;
@@ -79,8 +79,8 @@ nav li:first-child {
 
 .header-button:hover {
     display: inline-block;
-    color: var(--hover-colour);
-    background-color: #ce00000c;
+    color: var(--button-color-hover);
+    background-color: var(--button-background-colour-hover);
     border-radius: 0.5em;
     padding: .75em 1.25em;
     font-weight: normal;
@@ -92,7 +92,7 @@ header {
     width: min(75em, 100%);
     background-color: var(--colour-1);
     padding: 0 1em 0 1em;
-    border-radius: 2em;
+    border-radius: var(--roundness);
 }
 
 section {
@@ -100,7 +100,7 @@ section {
     width: min(75em, 100%);
     background-color: var(--colour-1);
     padding: 1.5em min(2em, 3%) min(2em, 3%);
-    border-radius: 2em;
+    border-radius: var(--roundness);
 }
 
 .flex-container {
@@ -121,7 +121,7 @@ section {
 
 section img {
     max-width: 100%;
-    border-radius: 1em;
+    border-radius: var(--roundness);
     object-fit: cover;
     object-position: center;
 }
@@ -130,7 +130,6 @@ section img {
     flex: 0 1 34em;
     text-align: center;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size-adjust: .4;
 }
 
 .text-container p {
@@ -145,15 +144,11 @@ section img {
     align-content: center;
 }
 
-h1 {
-    font-size: 2.5rem;
-}
-
 .cta-button {
+    color: var(--button-color);
     font-size: 1rem;
     text-decoration: none;
-    color: #575656;
-    font-family: Exo;
+    font-family: Finlandica, Exo;
     border-style: solid;
     border-radius: 0.1em;
     padding: .2em 1em;
@@ -163,9 +158,9 @@ h1 {
 }
 
 .cta-button:hover {
-        scale: 102%;
-    background-color: #2c00001f;
-    color: var(--hover-colour);
+    scale: 102%;
+    background-color: var(--button-background-colour-hover);
+    color: var(--button-color-hover);
 }
 
 .gig {
@@ -174,7 +169,7 @@ h1 {
 }
 
 .gig a {
-    display: inline-block;
+    display: block;
     margin: .2em;
     font-size: 1.5rem;
 }
@@ -188,7 +183,7 @@ h1 {
     font-size: 1.2rem;
     text-decoration: none;
     color: #575656;
-    font-family: Exo;
+    font-family: Finlandica, Courier Prime, Courier New, exo;
     border-style: solid;
     border-width: .15em;
     border-radius: 0.1em;
@@ -199,12 +194,12 @@ h1 {
 
 .ticket-link:hover {
     scale: 102%;
-    background-color: #2c00001f;
-    color: var(--hover-colour);
+    background-color: var(--button-background-colour-hover);
+    color: var(--button-color-hover);
 }
 
 .past-gig {
-    margin: 1em 0 0 0;
+    margin: 1em 0.5em 0.5em;
     font-family: Courier Prime;
     text-align: left;
     justify-content: left;

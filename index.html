@@ -13,22 +13,43 @@
             <div class="nav-links">
                 <a href="#listen">Listen</a>
                 <a href="#watch">Watch</a>
-                <a>Projects</a>
-                <a>Gallery</a>
-                <a>Press Kit</a>
-                <a>Subscribe</a>
-                <a>About</a>
-                <a>Contact</a>
-                <a href="https://www.facebook.com/NoahJamesMusician" target="blank"><img src="/images/facebook-icon.png" width="28"></a>
-                <a href="https://www.instagram.com/noahchurches/?hl=en" target="blank"><img src="/images/instagram-icon.png" width="28"></a>
-                <a href="https://www.youtube.com/@noah_churches" target="blank"><img src="/images/youtube-icon.png" width="28"></a>
-                <div class="menu"><a><img src="/images/menu-icon.png" width="28"></a></div>
+                <a href="#projects">Projects</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#presskit">Press Kit</a>
+                <a href="#subscribe">Subscribe</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="https://www.facebook.com/NoahJamesMusician" target="blank"><img src="/images/facebook-icon.png"></a>
+                <a href="https://www.instagram.com/noahchurches/?hl=en" target="blank"><img src="/images/instagram-icon.png"></a>
+                <a href="https://www.youtube.com/@noah_churches" target="blank"><img src="/images/youtube-icon.png"></a>
+            </div>
+            <div class="menu">
+                <a onclick="sidebar_open()" class="menu-button"><img src="/images/menu-icon.png"></a>
+                <div class="click-catch" id="clickCatch" onclick="sidebar_close()"></div>
+                <div class="sidebar" id="MySideBar">
+                    <a class="close-button" onclick="sidebar_close()"><img src="/images/close-icon.png" alt=""></a>
+                    <div class="sidebar-links">
+                        <a href="#listen" onclick="sidebar_close()">Listen</a>
+                        <a href="#watch" onclick="sidebar_close()">Watch</a>
+                        <a href="#projects" onclick="sidebar_close()">Projects</a>
+                        <a href="#gallery" onclick="sidebar_close()">Gallery</a>
+                        <a href="#presskit" onclick="sidebar_close()">Press Kit</a>
+                        <a href="#subscribe" onclick="sidebar_close()">Subscribe</a>
+                        <a href="#about" onclick="sidebar_close()">About</a>
+                        <a href="#contact" onclick="sidebar_close()">Contact</a>
+                        <div class="sidebar-social-links">
+                            <a href="https://www.facebook.com/NoahJamesMusician" target="blank"><img src="/images/facebook-icon.png"></a>
+                            <a href="https://www.instagram.com/noahchurches/?hl=en" target="blank"><img src="/images/instagram-icon.png"></a>
+                            <a href="https://www.youtube.com/@noah_churches" target="blank"><img src="/images/youtube-icon.png"></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
 
     <div class="heroshot-container">
-        <img class="hero-shot" src="/images/MandN-33.jpg" alt="">
+        <img class="hero-shot" src="/images/MandN-33 resized.jpg" alt="">
         <img class="diagonal" src="/images/section-diagonal.png" alt="">
     </div>
 
@@ -101,4 +122,19 @@
     </section>
 
 </body>
+
+
+<script>
+function sidebar_open() {
+  document.getElementById("MySideBar").style.display = "block";
+  document.getElementById("MySideBar").style.boxShadow = "-20px 20px 20px rgba(0, 0, 0, 0.2)";
+  document.getElementById("clickCatch").style.display = "block";
+}
+
+function sidebar_close() {
+  document.getElementById("MySideBar").style.display = "none";
+  document.getElementById("MySideBar").style.boxShadow = "-20px 20px 20px rgba(0, 0, 0, 0)";
+  document.getElementById("clickCatch").style.display = "none";
+}
+</script>
 </html>
